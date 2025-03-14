@@ -5,7 +5,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "CYP3A4",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "CYP3A4|Reference concentration",
@@ -80,7 +80,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "CYP1A1",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "CYP1A1|Reference concentration",
@@ -156,7 +156,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "UGT1A1",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "Organism|Gonads|Intracellular|UGT1A1|Relative expression",
@@ -259,7 +259,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "UGT1A9",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "Organism|Gonads|Intracellular|UGT1A9|Relative expression",
@@ -358,7 +358,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "Cleavage-protein",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "Cleavage-protein|Reference concentration",
@@ -406,7 +406,7 @@
       "Type": "Transporter",
       "Species": "Human",
       "Molecule": "ABCG2",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "ABCG2|Reference concentration",
@@ -750,7 +750,7 @@
       "Type": "Transporter",
       "Species": "Human",
       "Molecule": "ABCB1",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "ABCB1|Reference concentration",
@@ -1351,7 +1351,7 @@
       "Type": "Transporter",
       "Species": "Human",
       "Molecule": "M-1 TS",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "M-1 TS|Reference concentration",
@@ -1599,7 +1599,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "UGT2B7",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "Organism|Gonads|Intracellular|UGT2B7|Relative expression",
@@ -1698,7 +1698,7 @@
       "Type": "Enzyme",
       "Species": "Human",
       "Molecule": "Hepatic-CYP",
-      "Category": "Standard_Adult_UGT",
+      "Category": "Healthy",
       "Parameters": [
         {
           "Path": "Hepatic-CYP|Reference concentration",
@@ -1808,16 +1808,16 @@
         }
       ],
       "ExpressionProfiles": [
-        "CYP3A4|Human|Standard_Adult_UGT",
-        "CYP1A1|Human|Standard_Adult_UGT",
-        "UGT1A1|Human|Standard_Adult_UGT",
-        "UGT1A9|Human|Standard_Adult_UGT",
-        "Cleavage-protein|Human|Standard_Adult_UGT",
-        "ABCG2|Human|Standard_Adult_UGT",
-        "ABCB1|Human|Standard_Adult_UGT",
-        "M-1 TS|Human|Standard_Adult_UGT",
-        "UGT2B7|Human|Standard_Adult_UGT",
-        "Hepatic-CYP|Human|Standard_Adult_UGT"
+        "CYP3A4|Human|Healthy",
+        "CYP1A1|Human|Healthy",
+        "UGT1A1|Human|Healthy",
+        "UGT1A9|Human|Healthy",
+        "Cleavage-protein|Human|Healthy",
+        "ABCG2|Human|Healthy",
+        "ABCB1|Human|Healthy",
+        "M-1 TS|Human|Healthy",
+        "UGT2B7|Human|Healthy",
+        "Hepatic-CYP|Human|Healthy"
       ]
     }
   ],
@@ -2672,6 +2672,13 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "IV 0.08 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Boulton 2013 - 14C-dapagliflozin iv - Dapagliflozin - IV - 0.08 mg - Plasma - agg. (n=7)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -2873,6 +2880,58 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 10 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 10 mg (Urine) - Dapagliflozin - PO - 10 mg - Urine - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Vakkalagadda 2016 - Dapagliflozin - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=42)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 10 mg - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 10 mg (day 1) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2013a - Study 2: Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=16)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2013a - Study 1: Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=14)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2011c - Healthy Volunteers - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2011a - fasted - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=14)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Imamura 2013 - Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=22)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Boulton 2013 - Dapagliflozin po - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=7)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
@@ -3404,6 +3463,58 @@
         "Organism|Lumen|Feces|Dapagliflozin|Fraction excreted to feces",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 50 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 50 mg (Urine) - Dapagliflozin - PO - 50 mg - Urine - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 50 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 50 mg - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 50 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 50 mg (day 1) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 50 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2013b - Healthy subjects with normal kidney function - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=8)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 50 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2011b - Study 1: 50 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=24)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 50 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Kasichayanula 2008 - Mass Balance of 14C-dapagliflozin Urine - Dapagliflozin - PO - 50 mg - Urine - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 50 mg (perm)|Organism|Lumen|Feces|Dapagliflozin|Fraction excreted to feces",
+          "ObservedData": "Kasichayanula 2008 - Mass Balance of 14C-dapagliflozin Feces - Dapagliflozin - PO - 50 mg - Feces - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 50 mg (perm)|Organism|Dapagliflozin-UGT1A9-Optimized Metabolite|Total fraction of dose-Dapagliflozin",
+          "ObservedData": "Kasichayanula 2008 - Mass Balance of 14C-dapagliflozin 3OG Gluc - Dapagliflozin-3-O-glucuronide - PO - 50 mg - Fraction - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 50 mg (perm)|Organism|Dapagliflozin-Hepatic-CYP-Optimized Metabolite|Total fraction of dose-Dapagliflozin",
+          "ObservedData": "Kasichayanula 2008 - Mass Balance of 14C-dapagliflozin oxid Metab - Dapagliflozin oxidative metabolites - PO - 50 mg - Fraction - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 50 mg (perm)|Organism|Dapagliflozin-UGT2B7-Optimized Metabolite|Total fraction of dose-Dapagliflozin",
+          "ObservedData": "Kasichayanula 2008 - Mass Balance of 14C-dapagliflozin 2OG Gluc - Dapagliflozin-2-O-glucuronide - PO - 50 mg - Fraction - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -3885,6 +3996,23 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 2.5 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 2.5 mg (day 1) - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 2.5 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 2.5 mg - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 2.5 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 2.5 mg (Urine) - Dapagliflozin - PO - 2.5 mg - Urine - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -4247,6 +4375,18 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 5 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 5 mg - Dapagliflozin - PO - 5 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 5 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 5 mg (Urine) - Dapagliflozin - PO - 5 mg - Urine - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -4590,6 +4730,38 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2011b - Study 2: 20 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=18)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2011b - Study 3: 20 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=18)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Kasichayanula 2012 - Study 1: Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=24)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 20 mg (day 1) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 20 mg - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 20 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 20 mg (Urine) - Dapagliflozin - PO - 20 mg - Urine - agg. (n=6)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
@@ -5020,6 +5192,23 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 100 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 100 mg (day 1) - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 100 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 100 mg - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 100 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 100 mg (Urine) - Dapagliflozin - PO - 100 mg - Urine - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -5382,6 +5571,18 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 250 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 250 mg fasted - Dapagliflozin - PO - 250 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 250 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 250 mg fasted (Urine) - Dapagliflozin - PO - 250 mg - Urine - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -5722,6 +5923,18 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 500 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 500 mg - Dapagliflozin - PO - 500 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Linear",
+          "Path": "PO SD 500 mg (perm)|Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine",
+          "ObservedData": "Komoroski 2009 - SAD 500 mg (Urine) - Dapagliflozin - PO - 500 mg - Urine - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -6056,6 +6269,13 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 5 mg IC tablet (Chang 2015) (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Chang 2015 - Study 1 Treatment A (single oral doses) - Dapagliflozin - PO - 5 mg - Plasma - agg. (n=36)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -6318,6 +6538,13 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 250 mg fed (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - SAD 250 mg fed - Dapagliflozin - PO - 250 mg - Plasma - agg. (n=6)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
@@ -6599,6 +6826,13 @@
       ],
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO SD 10 mg IC tablet (Chang 2015) (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Chang 2015 - Study 2 Treatment A (single oral doses) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=36)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
@@ -6928,6 +7162,18 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 10 mg (day 1) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 10 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 10 mg (day 7 and day 14) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
@@ -7280,6 +7526,18 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 100 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 100 mg (day 1) - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 100 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 100 mg (day 7 and day 14) - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -7630,6 +7888,18 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 2.5 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 2.5 mg (day 1) - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 2.5 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 2.5 mg (day 7 and day 14) - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
@@ -7982,6 +8252,18 @@
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
       ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 20 mg (day 1) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 20 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 20 mg (day 7 and day 14) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)"
+        }
+      ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
         {
@@ -8332,6 +8614,18 @@
       "OutputSelections": [
         "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
         "Organism|Kidney|Urine|Dapagliflozin|Fraction excreted to urine"
+      ],
+      "OutputMappings": [
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 50 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 50 mg (day 1) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)"
+        },
+        {
+          "Scaling": "Log",
+          "Path": "PO MD 50 mg (perm)|Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
+          "ObservedData": "Komoroski 2009 - MAD 50 mg (day 7 and day 14) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)"
+        }
       ],
       "Individual": "Standard_Adult_UGT",
       "Compounds": [
