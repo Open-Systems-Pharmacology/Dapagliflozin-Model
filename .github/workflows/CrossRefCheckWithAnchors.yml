@@ -5,6 +5,9 @@ on:
     branches:
       - review
 
+permissions:
+  contents: read
+
 jobs:
   crossref-check-with-anchors:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/MarkdownCrossrefCheck_withAnchors.yml@main
