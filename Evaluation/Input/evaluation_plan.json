@@ -1,5 +1,5 @@
 {
-    "$schema": "https://github.com/Open-Systems-Pharmacology/QualificationPlan/releases/download/v2.1/OSP_Qualification_Plan_Schema.json",
+    "$schema": "https://github.com/Open-Systems-Pharmacology/QualificationPlan/releases/download/v3.3/OSP_Qualification_Plan_Schema.json",
     "Projects": [
         {
             "Id": "Dapagliflozin",
@@ -170,94 +170,97 @@
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "IV 0.08 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 2.5 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 5 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 10 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 20 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 50 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 100 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 250 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 500 mg (perm)",
-                "SectionId": 331
+                "SectionReference": "model-building"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 5 mg IC tablet (Chang 2015) (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 10 mg IC tablet (Chang 2015) (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO SD 250 mg fed (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO MD 2.5 mg (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO MD 10 mg (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO MD 20 mg (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO MD 50 mg (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             },
             {
                 "Project": "Dapagliflozin",
                 "Simulation": "PO MD 100 mg (perm)",
-                "SectionId": 332
+                "SectionReference": "model-verification"
             }
         ],
         "GOFMergedPlots": [
             {
                 "Title": "Goodness of fit plot for concentration in plasma",
-                "SectionId": 32,
-                "PlotType": "predictedVsObserved|residualsOverTime",
+                "SectionReference": "diagnostics-plots",
+                "PlotTypes": [
+                    "predictedVsObserved",
+                    "residualsOverTime"
+                ],
                 "Groups": [
                     {
                         "Caption": "IV (model building)",
@@ -280,14 +283,10 @@
                                 "Project": "Dapagliflozin",
                                 "Simulation": "PO SD 2.5 mg (perm)",
                                 "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - SAD 2.5 mg - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 2.5 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - MAD 2.5 mg (day 1) - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)",
+                                "ObservedData": [
+                                    "Komoroski 2009 - SAD 2.5 mg - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)",
+                                    "Komoroski 2009 - MAD 2.5 mg (day 1) - Dapagliflozin - PO - 2.5 mg - Plasma - agg. (n=6)"
+                                ],
                                 "Color": "#000000"
                             },
                             {
@@ -301,140 +300,52 @@
                                 "Project": "Dapagliflozin",
                                 "Simulation": "PO SD 10 mg (perm)",
                                 "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Boulton 2013 - Dapagliflozin po - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=7)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Imamura 2013 - Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=22)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2011a - fasted - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=14)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2013a - Study 1: Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=14)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2013a - Study 2: Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=16)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Vakkalagadda 2016 - Dapagliflozin - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=42)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2011c - Healthy Volunteers - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - SAD 10 mg - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 10 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - MAD 10 mg (day 1) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)",
+                                "ObservedData": [
+                                    "Boulton 2013 - Dapagliflozin po - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=7)",
+                                    "Imamura 2013 - Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=22)",
+                                    "Kasichayanula 2011a - fasted - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=14)",
+                                    "Kasichayanula 2013a - Study 1: Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=14)",
+                                    "Kasichayanula 2013a - Study 2: Control (Perpetrator Placebo) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=16)",
+                                    "Vakkalagadda 2016 - Dapagliflozin - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=42)",
+                                    "Kasichayanula 2011c - Healthy Volunteers - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)",
+                                    "Komoroski 2009 - SAD 10 mg - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)",
+                                    "Komoroski 2009 - MAD 10 mg (day 1) - Dapagliflozin - PO - 10 mg - Plasma - agg. (n=6)"
+                                ],
                                 "Color": "#000000"
                             },
                             {
                                 "Project": "Dapagliflozin",
                                 "Simulation": "PO SD 20 mg (perm)",
                                 "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2012 - Study 1: Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=24)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 20 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - SAD 20 mg - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 20 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - MAD 20 mg (day 1) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 20 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2011b - Study 3: 20 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=18)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 20 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2011b - Study 2: 20 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=18)",
+                                "ObservedData": [
+                                    "Kasichayanula 2012 - Study 1: Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=24)",
+                                    "Komoroski 2009 - SAD 20 mg - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)",
+                                    "Komoroski 2009 - MAD 20 mg (day 1) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=6)",
+                                    "Kasichayanula 2011b - Study 3: 20 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=18)",
+                                    "Kasichayanula 2011b - Study 2: 20 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 20 mg - Plasma - agg. (n=18)"
+                                ],
                                 "Color": "#000000"
                             },
                             {
                                 "Project": "Dapagliflozin",
                                 "Simulation": "PO SD 50 mg (perm)",
                                 "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2011b - Study 1: 50 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=24)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 50 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Kasichayanula 2013b - Healthy subjects with normal kidney function - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=8)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 50 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - SAD 50 mg - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 50 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - MAD 50 mg (day 1) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)",
+                                "ObservedData": [
+                                    "Kasichayanula 2011b - Study 1: 50 mg Control (Perpetrator Placebo) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=24)",
+                                    "Kasichayanula 2013b - Healthy subjects with normal kidney function - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=8)",
+                                    "Komoroski 2009 - SAD 50 mg - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)",
+                                    "Komoroski 2009 - MAD 50 mg (day 1) - Dapagliflozin - PO - 50 mg - Plasma - agg. (n=6)"
+                                ],
                                 "Color": "#000000"
                             },
                             {
                                 "Project": "Dapagliflozin",
                                 "Simulation": "PO SD 100 mg (perm)",
                                 "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - SAD 100 mg - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)",
-                                "Color": "#000000"
-                            },
-                            {
-                                "Project": "Dapagliflozin",
-                                "Simulation": "PO SD 100 mg (perm)",
-                                "Output": "Organism|PeripheralVenousBlood|Dapagliflozin|Plasma (Peripheral Venous Blood)",
-                                "ObservedData": "Komoroski 2009 - MAD 100 mg (day 1) - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)",
+                                "ObservedData": [
+                                    "Komoroski 2009 - SAD 100 mg - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)",
+                                    "Komoroski 2009 - MAD 100 mg (day 1) - Dapagliflozin - PO - 100 mg - Plasma - agg. (n=6)"
+                                ],
                                 "Color": "#000000"
                             },
                             {
@@ -533,7 +444,7 @@
         "ComparisonTimeProfilePlots": [
             {
                 "Title": "Multiple Dose Escalation Study (day 1)",
-                "SectionId": 333,
+                "SectionReference": "ct-profiles-overview",
                 "SimulationDuration": 24,
                 "TimeUnit": "h",
                 "OutputMappings": [
@@ -596,7 +507,7 @@
             },
             {
                 "Title": "Multiple Dose Escalation Study (day 7)",
-                "SectionId": 333,
+                "SectionReference": "ct-profiles-overview",
                 "SimulationDuration": 24,
                 "TimeUnit": "h",
                 "OutputMappings": [
@@ -659,7 +570,7 @@
             },
             {
                 "Title": "Multiple Dose Escalation Study (day 14)",
-                "SectionId": 333,
+                "SectionReference": "ct-profiles-overview",
                 "SimulationDuration": 24,
                 "TimeUnit": "h",
                 "OutputMappings": [
@@ -729,82 +640,82 @@
             "Project": "Dapagliflozin",
             "Name": "Dapagliflozin",
             "Type": "Compound",
-            "SectionId": 31
+            "SectionReference": "final-input-parameters"
         },
         {
             "Name": "IC tablet (Chang 2015)",
             "Project": "Dapagliflozin",
             "Type": "Formulation",
-            "SectionId": 31
+            "SectionReference": "final-input-parameters"
         },
         {
             "Name": "Dissolved",
             "Project": "Dapagliflozin",
             "Type": "Formulation",
-            "SectionId": 31
+            "SectionReference": "final-input-parameters"
         }
     ],
     "Sections": [
         {
-            "Id": 1,
-            "Title": "1 Introduction",
+            "Reference": "introduction",
+            "Title": "Introduction",
             "Content": "Content/Section1_Introduction.md"
         },
         {
-            "Id": 2,
-            "Title": "2 Methods",
+            "Reference": "methods",
+            "Title": "Methods",
             "Content": "Content/Section2_Methods.md",
             "Sections": [
                 {
-                    "Id": 21,
-                    "Title": "2.1 Modeling Strategy",
+                    "Reference": "modeling-strategy",
+                    "Title": "Modeling Strategy",
                     "Content": "Content/Section2.1_Modeling_Strategy.md"
                 },
                 {
-                    "Id": 22,
-                    "Title": "2.2 Data",
+                    "Reference": "data",
+                    "Title": "Data",
                     "Content": "Content/Section2.2_Data.md"
                 },
                 {
-                    "Id": 23,
-                    "Title": "2.3 Model Parameters and Assumptions",
+                    "Reference": "model-parameters-and-assumptions",
+                    "Title": "Model Parameters and Assumptions",
                     "Content": "Content/Section2.3_Model_Parameters_and_Assumptions.md"
                 }
             ]
         },
         {
-            "Id": 3,
-            "Title": "3 Results and Discussion",
+            "Reference": "results-and-discussion",
+            "Title": "Results and Discussion",
             "Content": "Content/Section3_Results_and_Discussion.md",
             "Sections": [
                 {
-                    "Id": 31,
-                    "Title": "3.1 Final input parameters",
+                    "Reference": "final-input-parameters",
+                    "Title": "Final input parameters",
                     "Content": "Content/Input_table.md"
                 },
                 {
-                    "Id": 32,
-                    "Title": "3.2 Diagnostics Plots",
+                    "Reference": "diagnostics-plots",
+                    "Title": "Diagnostics Plots",
                     "Content": "Content/GOF_diagnostics.md"
                 },
                 {
-                    "Id": 33,
-                    "Title": "3.3 Concentration-Time Profiles",
+                    "Reference": "ct-profiles",
+                    "Title": "Concentration-Time Profiles",
                     "Content": "Content/Concentration_time_profiles.md",
                     "Sections": [
                         {
-                            "Id": 331,
-                            "Title": "3.3.1 Model Building",
+                            "Reference": "model-building",
+                            "Title": "Model Building",
                             "Content": "Content/Concentration_time_profiles_building.md"
                         },
                         {
-                            "Id": 332,
-                            "Title": "3.3.2 Model Verification",
+                            "Reference": "model-verification",
+                            "Title": "Model Verification",
                             "Content": "Content/Concentration_time_profiles_verification.md"
                         },
                         {
-                            "Id": 333,
-                            "Title": "3.3.3 Overview",
+                            "Reference": "ct-profiles-overview",
+                            "Title": "Overview",
                             "Content": "Content/Concentration_time_profiles_overview.md"
                         }
                     ]
@@ -812,13 +723,13 @@
             ]
         },
         {
-            "Id": 4,
-            "Title": "4 Conclusion",
+            "Reference": "conclusion",
+            "Title": "Conclusion",
             "Content": "Content/Section4_Conclusion.md"
         },
         {
-            "Id": 5,
-            "Title": "5 References",
+            "Reference": "main-references",
+            "Title": "References",
             "Content": "Content/References.md"
         }
     ],
